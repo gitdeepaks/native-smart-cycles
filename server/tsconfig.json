@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  }
+    "target": "esnext", // Compile to a modern ECMAScript version for optimal features
+    "module": "esnext", // Use a modern module standard that aligns with Bun's capabilities
+    "moduleResolution": "node", // Use Node.js-style module resolution
+    "strict": true, // Enable all strict type-checking options
+    "jsx": "react-jsx", // Use the react-jsx transformer, compatible with React 17+
+    "jsxImportSource": "hono/jsx", // Specify Hono as the source for importing JSX create elements
+    "esModuleInterop": true, // Enables compilation from non-module scripts
+    "skipLibCheck": true, // Skip type checking of all declaration files (*.d.ts)
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true // Allow default imports from modules with no default export
+  },
+  "include": ["src/**/*"], // Include all files in the src directory
+  "exclude": ["node_modules"] // Exclude the node_modules directory
 }
